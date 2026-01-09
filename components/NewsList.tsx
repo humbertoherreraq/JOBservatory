@@ -1,18 +1,11 @@
 import { Badge } from "./Badge";
-import type { NewsCategory } from "../data/mock";
+import type { NewsCategory, NewsItem } from "../data/mock";
 
 const labels: Record<NewsCategory, string> = {
   logros: "Logro",
   rumores: "Rumor",
   cambios: "Cambio",
   escandalos: "Escándalo"
-};
-
-export type NewsItem = {
-  title: string;
-  date: string;
-  category: NewsCategory;
-  source: string;
 };
 
 export function NewsList({ items }: { items: NewsItem[] }) {
