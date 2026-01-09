@@ -1,5 +1,12 @@
 export type NewsCategory = "logros" | "rumores" | "cambios" | "escandalos";
 
+export type NewsItem = {
+  title: string;
+  date: string;
+  category: NewsCategory;
+  source: string;
+};
+
 export type ModuleSlug =
   | "perfil"
   | "salud"
@@ -133,7 +140,7 @@ export const mockData = {
       category: "escandalos",
       source: "El Observador"
     }
-  ],
+  ] satisfies NewsItem[],
   topExecutives: [
     { name: "Lucía Torres", role: "CEO" },
     { name: "Andrés Molina", role: "CFO" },
