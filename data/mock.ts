@@ -1,6 +1,7 @@
 export type NewsCategory = "logros" | "rumores" | "cambios" | "escandalos";
 
 export type NewsItem = {
+  id: string;
   title: string;
   date: string;
   category: NewsCategory;
@@ -117,24 +118,28 @@ export const mockData = {
   ],
   newsGossip: [
     {
+      id: "news-gossip-1",
       title: "Reconocimiento como empleador Top 10",
       date: "Feb 2023",
       category: "logros",
       source: "HR Weekly"
     },
     {
+      id: "news-gossip-2",
       title: "Rumor sobre posible adquisición",
       date: "Ago 2023",
       category: "rumores",
       source: "Mercados Insider"
     },
     {
+      id: "news-gossip-3",
       title: "Nuevo VP de Producto",
       date: "Ene 2024",
       category: "cambios",
       source: "Tech People"
     },
     {
+      id: "news-gossip-4",
       title: "Investigación por prácticas de datos",
       date: "May 2024",
       category: "escandalos",

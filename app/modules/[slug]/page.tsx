@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Card } from "../../../components/Cards";
 import { NewsList } from "../../../components/NewsList";
 import { MarketShareChart, RevenueChurnChart, SentimentChart } from "../../../components/Charts";
-import { mockData, moduleLabels, type ModuleSlug } from "../../../data/mock";
+import { mockData, moduleLabels, type ModuleSlug, type NewsItem } from "../../../data/mock";
 
 const moduleDescriptions: Record<ModuleSlug, string> = {
   perfil: "Información corporativa, estructura y variables clave.",
@@ -30,6 +30,13 @@ export default function ModulePage({ params }: { params: { slug: ModuleSlug } })
     newsGossip,
     strengthsWeaknesses
   } = mockData;
+  const normalizedNewsGossip: NewsItem[] = newsGossip.map((item, index) => ({
+    id: item.id ?? `news-gossip-${index + 1}`,
+    title: item.title,
+    date: item.date,
+    category: item.category,
+    source: item.source
+  }));
 
   return (
     <div className="space-y-8">
@@ -198,7 +205,7 @@ export default function ModulePage({ params }: { params: { slug: ModuleSlug } })
             <h3 className="text-lg font-semibold text-white">News & Gossip (3 años)</h3>
             <p className="mt-2 text-xs text-slate-400">Rumors claramente etiquetado.</p>
             <div className="mt-4">
-              <NewsList items={newsGossip} />
+              <NewsList items={normalizedNewsGossip} />
             </div>
           </Card>
         </div>
