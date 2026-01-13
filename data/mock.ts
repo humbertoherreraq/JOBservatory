@@ -31,7 +31,7 @@ export const sidebarItems = [
   { slug: "estrategia", label: "Estrategia" },
   { slug: "mercado", label: "Mercado" },
   { slug: "laboral", label: "Condiciones Laborales" },
-  { slug: "noticias", label: "Noticias y Chismes" }
+  { slug: "noticias", label: "Noticias y controversias" }
 ] as const;
 
 export const mockData = {
