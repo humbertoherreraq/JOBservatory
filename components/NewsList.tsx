@@ -14,12 +14,12 @@ export function NewsList({ items }: { items: NewsItem[] }) {
       {items.map((item) => (
         <div
           key={`${item.title}-${item.date}`}
-          className="rounded-xl border border-slate-800/60 bg-slate-950/50 p-4"
+          className="rounded-xl border border-slate-200 bg-slate-50 p-4"
         >
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-sm text-slate-400">{item.date}</p>
-              <h4 className="text-base font-semibold text-white">{item.title}</h4>
+              <p className="text-sm text-slate-500">{item.date}</p>
+              <h4 className="text-base font-semibold text-slate-900">{item.title}</h4>
             </div>
             <Badge tone={item.category}>{labels[item.category]}</Badge>
           </div>
