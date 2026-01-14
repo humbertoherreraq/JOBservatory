@@ -22,7 +22,7 @@ export const moduleLabels: Record<ModuleSlug, string> = {
   estrategia: "Strategic Direction",
   mercado: "Local Positioning",
   laboral: "Labor Stability & Conditions",
-  noticias: "News & Gossip"
+  noticias: "Noticias y controversias"
 };
 
 export const sidebarItems = [

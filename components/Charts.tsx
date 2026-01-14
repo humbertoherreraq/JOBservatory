@@ -14,7 +14,7 @@ import {
   YAxis
 } from "recharts";
 
-const chartStroke = "#60a5fa";
+const chartStroke = "#2563eb";
 
 export function RevenueChurnChart({
   data
@@ -25,14 +25,15 @@ export function RevenueChurnChart({
     <div className="h-64 w-full">
       <ResponsiveContainer>
         <LineChart data={data} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-          <XAxis dataKey="month" stroke="#94a3b8" fontSize={12} />
-          <YAxis stroke="#94a3b8" fontSize={12} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <XAxis dataKey="month" stroke="#64748b" fontSize={12} />
+          <YAxis stroke="#64748b" fontSize={12} />
           <Tooltip
             contentStyle={{
-              background: "#0f172a",
-              border: "1px solid #1e293b",
-              borderRadius: "12px"
+              background: "#ffffff",
+              border: "1px solid #e2e8f0",
+              borderRadius: "12px",
+              color: "#0f172a"
             }}
           />
           <Line type="monotone" dataKey="revenue" stroke={chartStroke} strokeWidth={3} />
@@ -48,14 +49,15 @@ export function SentimentChart({ data }: { data: { month: string; score: number 
     <div className="h-56 w-full">
       <ResponsiveContainer>
         <AreaChart data={data} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-          <XAxis dataKey="month" stroke="#94a3b8" fontSize={12} />
-          <YAxis stroke="#94a3b8" fontSize={12} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <XAxis dataKey="month" stroke="#64748b" fontSize={12} />
+          <YAxis stroke="#64748b" fontSize={12} />
           <Tooltip
             contentStyle={{
-              background: "#0f172a",
-              border: "1px solid #1e293b",
-              borderRadius: "12px"
+              background: "#ffffff",
+              border: "1px solid #e2e8f0",
+              borderRadius: "12px",
+              color: "#0f172a"
             }}
           />
           <Area
@@ -63,7 +65,7 @@ export function SentimentChart({ data }: { data: { month: string; score: number 
             dataKey="score"
             stroke="#22c55e"
             fill="#22c55e"
-            fillOpacity={0.15}
+            fillOpacity={0.12}
           />
         </AreaChart>
       </ResponsiveContainer>
@@ -81,17 +83,18 @@ export function MarketShareChart({ share }: { share: number }) {
     <div className="h-56 w-full">
       <ResponsiveContainer>
         <BarChart data={data} layout="vertical" margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis type="number" hide />
-          <YAxis type="category" dataKey="name" stroke="#94a3b8" fontSize={12} />
+          <YAxis type="category" dataKey="name" stroke="#64748b" fontSize={12} />
           <Tooltip
             contentStyle={{
-              background: "#0f172a",
-              border: "1px solid #1e293b",
-              borderRadius: "12px"
+              background: "#ffffff",
+              border: "1px solid #e2e8f0",
+              borderRadius: "12px",
+              color: "#0f172a"
             }}
           />
-          <Bar dataKey="value" fill="#38bdf8" radius={[0, 8, 8, 0]} />
+          <Bar dataKey="value" fill="#3b82f6" radius={[0, 8, 8, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
