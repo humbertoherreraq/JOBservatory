@@ -28,7 +28,7 @@ export default function ModuleSourcesPage({ params }: { params: { slug: ModuleSl
           </Link>
           <Link
             href="/dashboard"
-            className="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-sky-400"
+            className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800"
           >
             Volver al dashboard
           </Link>
@@ -40,7 +40,7 @@ export default function ModuleSourcesPage({ params }: { params: { slug: ModuleSl
           {sources.map((source) => (
             <li key={source.url} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <p className="font-semibold text-slate-900">{source.label}</p>
-              <a className="mt-1 block text-xs text-sky-600" href={source.url}>
+              <a className="mt-1 block text-xs text-slate-600 hover:text-slate-900" href={source.url}>
                 {source.url}
               </a>
             </li>
