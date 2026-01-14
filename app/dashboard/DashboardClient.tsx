@@ -68,7 +68,7 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           </div>
           <Link
             href="/modules/perfil"
-            className="mt-4 inline-flex text-sm font-semibold text-sky-600"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
           >
             Ver más detalles →
           </Link>
@@ -83,7 +83,7 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           </div>
           <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
             <span>Liquidez sólida y crecimiento constante.</span>
-            <Link href="/modules/salud" className="text-sky-600">
+            <Link href="/modules/salud" className="text-slate-700 hover:text-slate-900">
               Ver más detalles
             </Link>
           </div>
@@ -102,7 +102,10 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
               ))}
             </ul>
           </div>
-          <Link href="/modules/laboral" className="mt-4 inline-flex text-sm font-semibold text-sky-600">
+          <Link
+            href="/modules/laboral"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
             Ver más detalles →
           </Link>
         </Card>
@@ -128,7 +131,10 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           <p className="mt-4 text-xs text-slate-500">
             Competidores clave: {localPositioning.competitors.join(", ")}
           </p>
-          <Link href="/modules/mercado" className="mt-4 inline-flex text-sm font-semibold text-sky-600">
+          <Link
+            href="/modules/mercado"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
             Ver más detalles →
           </Link>
         </Card>
@@ -145,7 +151,10 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           <div className="mt-4">
             <SentimentChart data={laborStability.sentimentTrend} />
           </div>
-          <Link href="/modules/laboral" className="mt-4 inline-flex text-sm font-semibold text-sky-600">
+          <Link
+            href="/modules/laboral"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
             Ver más detalles →
           </Link>
         </Card>
@@ -169,7 +178,7 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           </div>
           <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
             <span>Planning 12 meses</span>
-            <Link href="/modules/estrategia" className="text-sky-600">
+            <Link href="/modules/estrategia" className="text-slate-700 hover:text-slate-900">
               Ver más detalles
             </Link>
           </div>
@@ -194,7 +203,10 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
               </ul>
             </div>
           </div>
-          <Link href="/modules/estrategia" className="mt-4 inline-flex text-sm font-semibold text-sky-600">
+          <Link
+            href="/modules/estrategia"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
             Ver más detalles →
           </Link>
         </Card>
@@ -215,7 +227,10 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
               </div>
             ))}
           </div>
-          <Link href="/modules/noticias" className="mt-4 inline-flex text-sm font-semibold text-sky-600">
+          <Link
+            href="/modules/noticias"
+            className="mt-4 inline-flex text-sm font-semibold text-slate-700 hover:text-slate-900"
+          >
             Ver más detalles →
           </Link>
         </Card>
@@ -227,7 +242,7 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
           </div>
           <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
             <span>Últimos 36 meses</span>
-            <Link href="/modules/noticias" className="text-sky-600">
+            <Link href="/modules/noticias" className="text-slate-700 hover:text-slate-900">
               Ver más detalles
             </Link>
           </div>

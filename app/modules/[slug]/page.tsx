@@ -55,7 +55,7 @@ export default function ModulePage({ params }: { params: { slug: ModuleSlug } })
           </Link>
           <Link
             href="/dashboard"
-            className="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-sky-400"
+            className="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800"
           >
             Volver al dashboard
           </Link>

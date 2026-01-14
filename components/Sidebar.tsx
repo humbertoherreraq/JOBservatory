@@ -71,13 +71,20 @@ const icons = {
 
 export function Sidebar() {
   return (
-    <aside className="flex h-full flex-col gap-8 border-r border-slate-200 bg-white px-6 py-8">
+    <aside className="flex h-full w-64 flex-col gap-8 border-r border-slate-200 bg-white px-6 py-8">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-          JOBservatory
-        </p>
-        <h1 className="mt-3 text-xl font-semibold text-slate-900">Análisis Empresarial</h1>
-        <p className="mt-2 text-sm text-slate-500">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-xs font-semibold text-white">
+            JS
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+              JOBservatory
+            </p>
+            <h1 className="mt-1 text-base font-semibold text-slate-900">Análisis Empresarial</h1>
+          </div>
+        </div>
+        <p className="mt-4 text-sm text-slate-500">
           Panorama integral de reputación, estabilidad y talento.
         </p>
       </div>
