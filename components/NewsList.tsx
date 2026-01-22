@@ -1,5 +1,5 @@
 import { Badge } from "./Badge";
-import type { NewsCategory, NewsItem } from "../data/mock";
+import type { NewsCategory, NewsItem } from "../data/types";
 
 const labels: Record<NewsCategory, string> = {
   logros: "Logro",
@@ -23,7 +23,16 @@ export function NewsList({ items }: { items: NewsItem[] }) {
             </div>
             <Badge tone={item.category}>{labels[item.category]}</Badge>
           </div>
-          <p className="mt-2 text-xs text-slate-500">Fuente: {item.source}</p>
+          <p className="mt-2 text-xs text-slate-500">
+            Fuente:{" "}
+            {item.url ? (
+              <a className="font-semibold text-slate-700 hover:text-slate-900" href={item.url}>
+                {item.source}
+              </a>
+            ) : (
+              item.source
+            )}
+          </p>
         </div>
       ))}
     </div>

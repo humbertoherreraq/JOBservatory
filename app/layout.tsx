@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import { Sidebar } from "../components/Sidebar";
 
@@ -12,7 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <body className="bg-slate-50 text-slate-900">
         <div className="flex min-h-screen">
-          <Sidebar />
+          <Suspense fallback={<div className="w-64 border-r border-slate-200 bg-white" />}>
+            <Sidebar />
+          </Suspense>
           <div className="flex min-h-screen flex-1 flex-col">
             <header className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-white px-10 py-4 shadow-sm">
               <div className="flex items-center gap-4">

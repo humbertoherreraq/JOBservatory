@@ -73,9 +73,9 @@ export function SentimentChart({ data }: { data: { month: string; score: number 
   );
 }
 
-export function MarketShareChart({ share }: { share: number }) {
+export function MarketShareChart({ share, label }: { share: number; label?: string }) {
   const data = [
-    { name: "JOBservatory", value: share },
+    { name: label ?? "Empresa", value: share },
     { name: "Resto mercado", value: 100 - share }
   ];
 
