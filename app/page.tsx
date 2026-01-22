@@ -18,7 +18,7 @@ export default function HomePage({ searchParams }: HomePageProps) {
             Encuentra el contexto de una empresa antes de ver el dashboard.
           </h1>
           <p className="mt-3 text-sm text-slate-600">
-            Completa los datos básicos para preparar el análisis MOCK y personalizar los módulos.
+            Completa los datos básicos para preparar el análisis dinámico y personalizar los módulos.
           </p>
           {searchParams?.alert === "1" ? (
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">

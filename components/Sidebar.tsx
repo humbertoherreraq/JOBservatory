@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { sidebarItems } from "../data/mock";
+import { useSearchParams } from "next/navigation";
+import { sidebarItems } from "../data/modules";
 
 const icons = {
   perfil: (
@@ -70,6 +73,8 @@ const icons = {
 };
 
 export function Sidebar() {
+  const searchParams = useSearchParams();
+  const queryString = searchParams?.toString();
   return (
     <aside className="flex h-full w-64 flex-col gap-8 border-r border-slate-200 bg-white px-6 py-8">
       <div>
@@ -92,7 +97,7 @@ export function Sidebar() {
         {sidebarItems.map((item) => (
           <Link
             key={item.slug}
-            href={`/modules/${item.slug}`}
+            href={queryString ? `/modules/${item.slug}?${queryString}` : `/modules/${item.slug}`}
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
           >
             <span className="text-slate-500">{icons[item.slug]}</span>
@@ -100,7 +105,7 @@ export function Sidebar() {
           </Link>
         ))}
         <Link
-          href="/dashboard"
+          href={queryString ? `/dashboard?${queryString}` : "/dashboard"}
           className="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
         >
           <span className="text-slate-500">
