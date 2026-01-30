@@ -105,18 +105,23 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
     );
   }
 
-  const {
-    modules: {
-      perfil,
-      salud,
-      estrategia,
-      mercado,
-      laboral,
-      noticias
-    },
-    rating,
-    updatedAt
-  } = companyData;
+const {
+  modules: { perfil, salud, estrategia, mercado, laboral, noticias },
+  rating: rawRating,
+  updatedAt
+} = companyData;
+
+const rating = {
+  score: rawRating?.score ?? 0,
+  summary: rawRating?.summary ?? "N/D",
+  positives: rawRating?.positives ?? [],
+  risks: rawRating?.risks ?? [],
+  // Estos 3 son los que te están rompiendo:
+  stars: (rawRating as any)?.stars ?? "N/D",
+  explanation: (rawRating as any)?.explanation ?? "",
+  sources: (rawRating as any)?.sources ?? []
+};
+
 
   const handleChangeCompany = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -254,7 +259,7 @@ export function DashboardClient({ companyName, country, city }: DashboardClientP
               </ul>
             </div>
           </div>
-          {rating.sources.length ? (
+          {rating.sources?.length ? (
             <div className="mt-4 text-xs text-slate-500">
               Fuentes:
               <ul className="mt-2 list-disc space-y-1 pl-4">
