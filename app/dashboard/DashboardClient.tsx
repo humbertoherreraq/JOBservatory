@@ -263,7 +263,7 @@ const rating = {
             <div className="mt-4 text-xs text-slate-500">
               Fuentes:
               <ul className="mt-2 list-disc space-y-1 pl-4">
-                {rating.sources.map((source) => (
+                {(rating.sources ?? []).map((source: { url: string; excerpt: string }) => (
                   <li key={source.url}>
                     <a className="text-slate-600 hover:text-slate-900" href={source.url}>
                       {source.excerpt}
