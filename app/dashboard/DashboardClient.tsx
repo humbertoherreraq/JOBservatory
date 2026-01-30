@@ -113,7 +113,7 @@ const {
 
 const rating = {
   score: rawRating?.score ?? 0,
-  summary: rawRating?.summary ?? "N/D",
+  summary: (rawRating as any)?.summary ?? "N/D",
   positives: rawRating?.positives ?? [],
   risks: rawRating?.risks ?? [],
   // Estos 3 son los que te están rompiendo:
